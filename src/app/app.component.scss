@@ -1,0 +1,86 @@
+mat-card {
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 5%;
+  font-family: "Red Hat Display";
+  font-weight: 500;
+  text-align: center;
+  width: 30%;
+  @media screen and (max-width: 768px) {
+    margin-top: 10%;
+    width: 80%;
+  }
+
+  mat-card-title {
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+  }
+
+  mat-card-subtitle {
+    color: hsl(224, 23%, 55%);
+    margin: auto;
+    width: 75%;
+  }
+
+  mat-grid-list {
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+
+    .music-icon {
+      background-image: url("../assets/icon-music.svg");
+      background-size: cover;
+    }
+
+    .title {
+      color: hsl(223, 47%, 23%);
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: hsl(224, 23%, 55%);
+    }
+
+    .change-button {
+      color: hsl(245, 75%, 52%);
+      font-weight: 700;
+      text-decoration: underline;
+      &:hover {
+        cursor: pointer;
+        opacity: 50%;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @mixin button {
+    border-radius: 15px;
+    height: 40px;
+    font-family: "Red Hat Display";
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+  }
+
+  .proceed-button {
+    @include button;
+    background-color: hsl(245, 75%, 52%);
+    color: hsl(225, 100%, 98%);
+    &:hover {
+      opacity: 50%;
+    }
+  }
+
+  .cancel-button {
+    @include button;
+    background-color: transparent;
+    color: hsl(224, 23%, 55%);
+    &:hover {
+      color: hsl(223, 47%, 23%);
+    }
+  }
+}
